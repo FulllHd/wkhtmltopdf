@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html class="header-html">
+<head>
+    <meta charset="UTF-8">
+    <title>Header</title>
+    <script>
+        function subst() {
+            var query_strings_from_url = document.location.search.substring(1).split('&');
+            var page;
+            query_strings_from_url.forEach(function (query_string) {
+                if (page) return;
+                var parts = query_string.split('=', 2);
+                if (parts[0] == 'page') page = decodeURI(parts[1]);
+            });
+            if (page) {
+                document.getElementsByClassName('header')[0].className = 'header page-' + page;
+            }
+        }
+    </script>
+    <style>
+        .header {
+            position: relative;
+            bottom: 2.5mm;
+            height: 22mm;
+            padding: 20px 40px;
+            border-bottom: 1px solid #dedede;
+            overflow: hidden;
+        }
+
+        .header img {
+            display: block;
+            height: 40px;
+        }
+
+        .header .label {
+            font-size: 10px;
+            color: #a0a0a0;
+            text-transform: uppercase;
+        }
+
+        .header .address {
+            margin-top: 5px;
+            font-size: 16px;
+        }
+
+        .header.page-1 {
+            border-top: 5px solid #f63501;
+            border-bottom: none;
+        }
+
+        .header.page-1 > * {
+            display: none !important;
+        }
+
+        .header .row {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-pack: justify !important;
+            -webkit-box-pack: justify !important;
+            -webkit-justify-content: space-between;
+            justify-content: space-between !important;
+        }
+
+        .header .row > .col {
+            float: none;
+        }
+    </style>
+</head>
+
+<body onload="subst()">
+
+<div class="header">
+    <div class="row">
+        <div class="col">
+            <div class="label">
+                THIS AGREEMENT IS MADE FOR
+            </div>
+            <div class="address">
+                Aster Drive, Hastings Point New South Wales 2489
+            </div>
+        </div>
+        <div class="col">
+            <img src="https://s3propertyspace-dev.s3.eu-central-1.amazonaws.com/lease_templates/images/logo-with-text.svg"
+                 alt="logo">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

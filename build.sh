@@ -1,0 +1,1 @@
+docker run -it -v $(pwd)/files:/files/ qweqwe wkhtmltopdf --disable-smart-shrinking --title TITLE --margin-top 25mm --margin-bottom 14mm --margin-left 0 --margin-right 0 --header-html files/header.html --footer-html files/footer.html --user-style-sheet files/styles.css files/pdf.html files/pdf.pdf

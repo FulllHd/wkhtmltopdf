@@ -1,0 +1,392 @@
+@font-face {
+    font-family: CircularBook;
+    src: url(https://s3propertyspace-dev.s3.eu-central-1.amazonaws.com/lease_templates/fonts/cfde5a604ccf77080d70aff422bfe190.ttf), url(https://s3propertyspace-dev.s3.eu-central-1.amazonaws.com/lease_templates/fonts/235476cb3a5fb03660bf7750622acf92.woff);
+}
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: CircularBook;
+    color: #343f4d;
+}
+
+.row {
+    display: block;
+    overflow: hidden;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.row > [class*="col"] {
+    float: left;
+    padding: 0 10px;
+}
+
+.col-1 {
+    width: 8.333333%;
+}
+.col-2 {
+    width: 16.666667%;
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.333333%;
+}
+.col-5 {
+    width: 41.666667%;
+}
+.col-6 {
+    width: 50%;
+}
+.col-7 {
+    width: 58.333333%;
+}
+.col-8 {
+    width: 66.666667%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.333333%;
+}
+.col-11 {
+    width: 91.666667%;
+}
+.col-12 {
+    width: 100%;
+}
+.col {
+    width: auto;
+}
+.col-auto {
+    width: auto;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.next-page {
+    page-break-before: always;
+}
+
+.page + .page {
+    page-break-before: always;
+}
+
+.page {
+    background-color: #ffffff;
+    padding: 20px 40px 0;
+    margin-top: 20px;
+}
+
+.page * {
+    word-break: break-word;
+}
+
+.page.main-page {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.main-logo {
+    margin: 60px 20px 20px 20px;
+}
+
+.main-logo img {
+    display: block;
+    height: 80px;
+}
+
+.main-title {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    height: 300px;
+    margin: 0 -40px 20px;
+    padding-right: 80px;
+    text-align: right;
+}
+
+.main-title h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 32px;
+}
+
+.main-title:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 300px;
+    background-color: #f6f6f6;
+}
+
+.main-description {
+    margin: 60px 0;
+    max-width: 40%;
+}
+
+.main-description .label {
+    font-size: 16px;
+    color: #525659;
+}
+
+.main-description p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.content .label, .content .payment-label, .content .label-alt {
+    margin: 0 150px 0 0;
+    padding: 5px;
+    /*background-color: #f63501;*/
+    background-color: #525659;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.content > .row {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.content .label-alt {
+    padding: 0;
+    margin-right: 0;
+    font-size: 16px;
+    color: inherit;
+    background: none;
+}
+
+.content .payment-label {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    min-width: 100px;
+    margin: 0;
+    text-align: center;
+}
+
+.content .box {
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #f7f7f7;
+    font-size: 16px;
+}
+
+.content .box .item {
+    margin: 5px 0;
+}
+
+.content .text {
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.content .text .heading {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.content .text.big {
+    font-size: 15px;
+}
+
+.content .text.big .heading {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.content .text.big .yes, .content .text.big .no {
+    float: right;
+    padding: 5px 5px;
+    margin: 0 0 5px 10px;
+    border: 1px solid #dedede;
+    font-weight: bold;
+}
+
+.content .sign {
+    min-height: 200px;
+    margin: 10px 0;
+}
+
+.content .sign img {
+    max-width: 100%;
+}
+
+.content .list {
+    overflow: hidden;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.content .list .date {
+    float: left;
+    font-weight: bold;
+    margin-right: 50px;
+}
+
+.content .list .description {
+    float: left;
+    max-width: 60%;
+}
+
+.content .list .description + .description {
+    float: right;
+    margin-left: 50px;
+}
+
+
+.static-page {
+    font-size: 13px;
+}
+
+.static-page h1 {
+    padding: 15px 0;
+    margin: 0;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+.static-page .signatures {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: -2%;
+    margin-right: -2%;
+    overflow: hidden;
+}
+
+.static-page .signatures .signature {
+    float: left;
+    width: 48%;
+    min-height: 80px;
+    margin: 0 1%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px dashed black;
+    font-size: 0;
+    vertical-align: middle;
+}
+
+.static-page .signatures .signature .text {
+    display: inline-block;
+    width: 55%;
+    height: 100%;
+    vertical-align: middle;
+    font-size: 13px;
+}
+
+.static-page .signatures .signature img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 40%;
+}
+
+.custom-list {
+    counter-reset: item;
+}
+
+.custom-list .item:not(.no-increment) {
+    counter-increment: item;
+}
+
+.custom-list .item {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+    padding-left: 26px;
+}
+.custom-list .item > .item {
+    padding-left: 36px;
+}
+.custom-list .item > .item > .item {
+    padding-left: 46px;
+}
+
+.custom-list .item.no {
+    text-decoration: line-through;
+}
+
+.custom-list .item > * {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.custom-list .item .item {
+    counter-reset: item;
+}
+
+.custom-list .item .item ~ .item {
+    counter-reset: none;
+}
+
+.custom-list .item + .item {
+    margin-top: 10px;
+}
+
+.custom-list .item > * + * {
+    margin-top: 10px;
+}
+
+.custom-list .item:before {
+    content: counters(item, ".");
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-weight: bold;
+}
+
+.custom-list .item .item:before {
+    font-weight: normal;
+}
+
+.custom-list .item.no-increment:before {
+    display: none;
+}
